@@ -20,7 +20,7 @@ Parameters:
  
   SenderEmail:
     Type: String
-    Default: ramyak9381@gmail.com
+    Default: 
     Description: Enter email from which you want to send emails to users for .srt files..
  
 Resources:
@@ -28,7 +28,7 @@ Resources:
     Type: AWS::Lambda::Function
     Properties:
       Runtime: nodejs20.x
-      Role: arn:aws:iam::081483530990:role/LabRole
+      Role: arn:aws:iam::
       Handler: index.handler
       Environment:
         Variables:
@@ -43,12 +43,12 @@ Resources:
     Type: AWS::Lambda::Function
     Properties:
       Runtime: nodejs20.x
-      Role: arn:aws:iam::081483530990:role/LabRole
+      Role: arn:aws:iam::
       Handler: index.handler
       Environment:
         Variables:
           SEND_EMAIL_LAMBDA_ARN: !Ref SendEmailWithSubtitlesFunction
-          API_KEY: "AIzaSyCy49nDo_xTs0pztJ20Tg6ik36mnOJuBCU"
+          API_KEY: ""
           GCS_BUCKET_NAME: "audio_bucket07"
       Code:
         S3Bucket: transcription-generator-code-for-cloudformation
@@ -59,7 +59,7 @@ Resources:
     Type: AWS::Lambda::Function
     Properties:
       Runtime: nodejs20.x
-      Role: arn:aws:iam::081483530990:role/LabRole
+      Role: arn:aws:iam::
       Handler: index.handler
       Environment:
         Variables:
